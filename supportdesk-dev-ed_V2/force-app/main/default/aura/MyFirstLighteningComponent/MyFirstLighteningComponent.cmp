@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<div class="$slds-p-around_small">
+    <p>
+    I am in lightening component
+    </p>
+    </div>
+    
+</aura:component>

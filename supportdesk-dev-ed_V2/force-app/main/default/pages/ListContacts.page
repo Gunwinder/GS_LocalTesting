@@ -1,0 +1,13 @@
+<apex:page controller="listcontacts">
+    <apex:form >
+        <apex:pageBlock title="List of Contacts" >
+            <apex:pageBlockTable value="{! Contacts}" var="ct">
+                <apex:column value="{!ct.FirstName}"/>
+                <apex:column value="{!ct.LastName}"/>
+                <apex:column value="{!ct.Title}"/>
+            </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

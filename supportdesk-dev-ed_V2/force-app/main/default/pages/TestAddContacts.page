@@ -1,0 +1,22 @@
+<apex:page controller="TestContactInsert">
+    <apex:form >
+    	<apex:pageBlock >
+        	FirstName:<apex:inputText value="{!FirstName}"/>
+            LastName:<apex:inputText value="{!LastName}"/>
+            Email:<apex:inputText value="{!Email}"/>
+        </apex:pageBlock>
+        <apex:pageBlock >
+               <apex:pageBlockTable value="{!newContacts}" var="a">
+                <apex:column value="{!a.Firstname}"/> <br/>
+                <apex:column value="{!a.Lastname}"/> <br/>
+                
+                <apex:column value="{!a.Email}"/>
+            </apex:pageBlockTable>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Add Contacts" action="{!zzTestCreateContacts}"/> <!-- action will be allways the method on the contorller class -->
+                <apex:commandButton value="Save" action="{!zzSaveContacts}"/> <!-- action will be allways the method on the contorller class -->
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

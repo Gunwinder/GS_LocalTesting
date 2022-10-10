@@ -1,0 +1,15 @@
+<apex:page controller="CommunitiesLandingController"  showHeader="True" sidebar="True">
+
+<apex:tabPanel switchType="Client" selectedTab="NeedSupport" id="TabPanel1">
+
+<apex:tab label="Need Support" name="NeedSupport" id="NeedSupport">
+
+<div align="left" width="50%">
+Foobar
+</div>
+
+</apex:tab>
+
+</apex:tabPanel>
+
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page controller="practise_oppEx2">
+    <apex:form >    
+    <apex:commandButton value="Closed Opps" action="{!ClosedOpps}" status="pageStatus" reRender="DynamicBlock"/>  
+    <apex:commandButton value="Open Opps" action="{!OpenOpps}" status="pageStatus" reRender="DynamicBlock"/>  
+    <apex:PageBlock id="DynamicBlock">
+        <apex:actionStatus id="pageStatus">
+            <apex:facet name="start">
+                  <apex:outputPanel >
+                      <img src="/img/loading32.gif" width="25" height="25" />
+                      <apex:outputLabel value="Loading..."/>
+                  </apex:outputPanel>            
+             </apex:facet>
+           </apex:actionStatus>
+        
+    	<apex:pageBlockTable value="{!Opp}" var="a">
+        	<apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.StageName}"/>
+        </apex:pageBlockTable>
+    </apex:PageBlock>
+                /* Small trick is to give a block with an id and reference in command button under reRender attribute. */
+    </apex:form>    
+</apex:page>

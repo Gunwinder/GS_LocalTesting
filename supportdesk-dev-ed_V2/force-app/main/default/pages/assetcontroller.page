@@ -1,0 +1,30 @@
+<apex:page controller="AssetsMain">
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!AMain}" var="a" title="All Assets"> // value should be provided on the table to render some thing.
+            <apex:column value="{!a.Id}"/>
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.Price}"/>
+            <apex:column value="{!a.SerialNumber}"/>
+            <apex:column value="{!a.Status}"/>          
+        </apex:pageBlockTable>
+        <br/>
+        <apex:pageBlockTable value="{!AMain_Shipped}" var="a" title="Shipped Assets"> // value should be provided on the table to render some thing.
+            <apex:column value="{!a.Id}"/>
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.Price}"/>
+            <apex:column value="{!a.SerialNumber}"/>
+            <apex:column value="{!a.Status}"/>          
+        </apex:pageBlockTable>
+        
+        <apex:pageBlockTable value="{!AMain_Registered}" var="a" title="Registered Assets"> // value should be provided on the table to render some thing.
+            <apex:column value="{!a.Id}"/>
+            <apex:column value="{!a.Name}"/>
+            <apex:column value="{!a.Price}"/>
+            <apex:column value="{!a.SerialNumber}"/>
+            <apex:column value="{!a.Status}"/>          
+        </apex:pageBlockTable>
+        <br/>
+        
+    </apex:pageBlock>
+    
+</apex:page>

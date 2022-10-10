@@ -1,0 +1,9 @@
+<apex:page standardController="Product2">
+    <apex:pageBlock >
+		<apex:outputPanel >
+        	Product Name: {!Product2.name}
+        </apex:outputPanel>
+        
+
+    </apex:pageBlock>
+</apex:page>
